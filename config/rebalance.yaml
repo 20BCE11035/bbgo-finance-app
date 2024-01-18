@@ -1,0 +1,15 @@
+---
+exchangeStrategies:
+  - on: max
+    rebalance:
+      schedule: "@every 1s"
+      quoteCurrency: TWD
+      targetWeights:
+        BTC: 60%
+        ETH: 30%
+        TWD: 10%
+      threshold: 1%
+      maxAmount: 1_000 # max amount to buy or sell per order
+      orderType: LIMIT_MAKER # LIMIT, LIMIT_MAKER or MARKET
+      dryRun: true
+      onStart: true
